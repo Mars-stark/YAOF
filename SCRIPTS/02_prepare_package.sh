@@ -4,6 +4,11 @@ clear
 ### 基础部分 ###
 # 使用 O2 级别的优化
 sed -i 's/Os/O2/g' include/target.mk
+# 更新 xunlei
+git clone https://github.com/sbwml/luci-app-xunlei package/xunlei
+# 更新 istore
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 # 更新 Feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
