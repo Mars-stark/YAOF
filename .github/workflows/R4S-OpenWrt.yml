@@ -11,13 +11,11 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'false'
+        default: 'true'
 jobs:
   build:
     runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id
-    permissions:
-      contents: write
     steps:
     - name: Show system
       run: |
