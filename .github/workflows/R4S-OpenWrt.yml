@@ -11,8 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    permissions:
-      contents: write
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Show system
