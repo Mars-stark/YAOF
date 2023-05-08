@@ -92,7 +92,6 @@ jobs:
     - name: Make Download
       run: |
         cd openwrt
-        make defconfig
         make download -j50
     - name: Compile Openwrt
       id: compileopenwrt
